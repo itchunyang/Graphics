@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/w001" android:duration="30"/>
+    <item android:drawable="@drawable/w002" android:duration="30"/>
+    <item android:drawable="@drawable/w003" android:duration="30"/>
+    <item android:drawable="@drawable/w004" android:duration="30"/>
+    <item android:drawable="@drawable/w005" android:duration="30"/>
+    <item android:drawable="@drawable/w006" android:duration="30"/>
+    <item android:drawable="@drawable/w007" android:duration="30"/>
+    <item android:drawable="@drawable/w008" android:duration="30"/>
+    <item android:drawable="@drawable/w009" android:duration="30"/>
+    <item android:drawable="@drawable/w010" android:duration="30"/>
+    <item android:drawable="@drawable/w011" android:duration="30"/>
+    <item android:drawable="@drawable/w012" android:duration="30"/>
+    <item android:drawable="@drawable/w003" android:duration="30"/>
+    <item android:drawable="@drawable/w004" android:duration="30"/>
+    <item android:drawable="@drawable/w005" android:duration="30"/>
+    <item android:drawable="@drawable/w006" android:duration="30"/>
+
+</animation-list>

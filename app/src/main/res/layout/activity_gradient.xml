@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_gradient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.itchunyang.graphics.GradientActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:background="@drawable/shape_drawable_1"
+            android:text="Rectangle"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:background="@drawable/shape_drawable_2"
+            android:text="Oval"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:background="@drawable/shape_drawable_3"
+            android:text="Ring"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:background="@drawable/shape_drawable_4"
+            android:text="Rectangle"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:background="@drawable/shape_drawable_5"
+            android:text="Rectangle"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:background="@drawable/shape_drawable_6"
+            android:text="Rectangle"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:layerType="software"
+            android:background="@drawable/shape_drawable_7"
+            android:text="Rectangle"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+    </LinearLayout>
+
+</LinearLayout>
