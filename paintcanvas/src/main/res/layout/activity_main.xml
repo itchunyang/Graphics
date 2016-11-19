@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#242424"
+    android:padding="15dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textColor="#dddddd"
+        android:text="Canvas Paint基本方法"/>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:text="Line"
+            android:onClick="line"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="Rect"
+            android:onClick="rect"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="Circle"
+            android:onClick="circle"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="RountRect"
+            android:onClick="roundRect"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:text="Point"
+            android:onClick="point"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="Oval"
+            android:onClick="oval"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="Arc"
+            android:onClick="arc"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="Text"
+            android:onClick="text"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:text="Path"
+            android:onClick="path"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#ae0000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textColor="#dddddd"
+        android:text="Text 详解"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:text="TextPath"
+            android:onClick="textPath"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_text"
+            android:text="TextLine"
+            android:onClick="textLine"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_text1"
+            android:text="TextLine1"
+            android:onClick="textLine"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_text2"
+            android:text="TextLine2"
+            android:onClick="textLine"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_text3"
+            android:text="TextView"
+            android:onClick="textLine"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#ae0000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textColor="#dddddd"
+        android:text="Path 详解"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:text="PathMeasure"
+            android:onClick="pathMeasure"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="PathMeasure1"
+            android:onClick="pathMeasure1"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="Arrow"
+            android:onClick="arrow"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="Heart"
+            android:onClick="heart"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="Hand"
+            android:onClick="hand"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="Wave"
+            android:onClick="wave"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#ae0000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textColor="#dddddd"
+        android:text="Canvas 详解"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:text="Trans"
+            android:onClick="translate"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="Rotate"
+            android:onClick="rotate"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="Scale"
+            android:onClick="scale"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="Clip"
+            android:onClick="clip"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="Save"
+            android:onClick="save"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:text="Layer"
+            android:onClick="layer"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="Layer"
+            android:onClick="layer01"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="Layer"
+            android:onClick="layer02"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="Layer"
+            android:onClick="layer03"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#ae0000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textColor="#dddddd"
+        android:text="Paint 高级"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_shadowLayer"
+            android:text="阴影效果"
+            android:onClick="shadowLayer"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_dx_plus"
+            android:text="增加dx"
+            android:onClick="shadowLayer"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_dy_plus"
+            android:text="增加dy"
+            android:onClick="shadowLayer"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_radius_plus"
+            android:text="增加radius"
+            android:onClick="shadowLayer"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:text="AvoidXfermode"
+            android:onClick="avoidXfermode"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:text="PorterDuffXfermode"
+            android:onClick="porterDuffXfermode"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:text="图片遮罩"
+            android:onClick="imageMask"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="灯光书架"
+            android:onClick="light"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="涂鸦图片"
+            android:id="@+id/eraser_1"
+            android:onClick="eraser"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/eraser_2"
+            android:text="涂鸦图片"
+            android:onClick="eraser"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="文字波浪"
+            android:onClick="textWave"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="文字波浪"
+            android:onClick="circleWave"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_gravity="center_horizontal"
+        android:background="#cccccc"
+        android:layout_marginTop="20dp"
+        android:layout_width="600dp"
+        android:layout_height="600dp" />
+
+</LinearLayout>
