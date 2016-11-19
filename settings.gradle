@@ -1,1 +1,1 @@
-include ':app', ':style'
+include ':app', ':style', ':paintcanvas'
