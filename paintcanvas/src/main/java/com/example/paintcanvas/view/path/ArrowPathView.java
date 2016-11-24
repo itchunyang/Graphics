@@ -35,7 +35,9 @@ public class ArrowPathView extends View {
 
         pos = new float[2];
         tan = new float[2];
-        bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.arrow);
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inSampleSize = 2;
+        bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.arrow,options);
         matrix = new Matrix();
 
         path = new Path();
@@ -60,6 +62,8 @@ public class ArrowPathView extends View {
 
         //atan2是根据正切数值计算出该角度的大小。得到的单位是弧度。
         float degrees = (float) (Math.atan2(tan[1],tan[0]) * 180.0/Math.PI);
+        System.out.println("pos[0]="+pos[0]+" pos[1]="+pos[1] + " tan[0]="+tan[0]+" tan[1]="+tan[1] + " degress="+degrees);
+
         matrix.reset();
         matrix.postRotate(degrees + 180,bitmap.getWidth()/2,bitmap.getHeight()/2);//旋转图片
         matrix.postTranslate(pos[0] - bitmap.getWidth()/2,pos[1] - bitmap.getHeight()/2);//将图片绘制中心调整到与当前点重合

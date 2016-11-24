@@ -16,7 +16,6 @@ import android.view.animation.DecelerateInterpolator;
  */
 public class HeartPathView extends View {
 
-    private int PATH_WIDTH = 2;
     private int[] START_POINT = {300,270};
     private int[] BOTTOM_POINT = {300,400};
     private int[] LEFT_CONTROL_POINT = {450,200};
@@ -70,6 +69,10 @@ public class HeartPathView extends View {
 
     public void startPathAnim(long duration){
         ValueAnimator animator = ValueAnimator.ofFloat(0,mPathMeasure.getLength());
+
+        //上面的逆时针的,因为这个path不能设置方向,要想顺时针下面的:
+//        ValueAnimator animator = ValueAnimator.ofFloat(mPathMeasure.getLength(),0);
+
         animator.setDuration(duration);
         animator.setInterpolator(new DecelerateInterpolator());
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {

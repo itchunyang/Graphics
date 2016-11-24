@@ -18,6 +18,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.paintcanvas.view.path.PathActivity;
+import com.example.paintcanvas.view.text.TextActivity;
+import com.example.paintcanvas.view.xfermode.XfermodeActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     private Bitmap dst ;//画图结果
@@ -237,15 +241,16 @@ public class MainActivity extends AppCompatActivity {
         path.moveTo(50,250);
         path.lineTo(120,330);
         RectF rectF = new RectF(170,300,300,400);
-        path.arcTo(rectF,30,160,true);
+        path.arcTo(rectF,30,160,false);
         canvas.drawPath(path,paint);
         paint.setColor(Color.RED);
         canvas.drawRect(rectF,paint);
 
         /**
+         * 不带r的方法是基于原点的坐标系(偏移量)，rXxx方法是基于当前点坐标系(偏移量)
          * path.addArc 及 path.arcTo 区别
          * arrArc:添加一个椭圆到path中，和上一次的操作点无关
-         * arcTo:添加一个椭圆到Path中，如果圆弧的起始点和上次操作点坐标不同(且forceMoveTo = true时)，就连接两个点
+         * arcTo:添加一个椭圆到Path中，如果圆弧的起始点和上次操作点坐标不同(且forceMoveTo = false)，就直线连接两个点
          */
 
         //二阶贝塞尔曲线 起始点为path的起始点:(80,430) 控制点(160, 530)  结束点为(250,490)
@@ -265,8 +270,9 @@ public class MainActivity extends AppCompatActivity {
         /**
          * 这里的dx、dy表示的是相对起始点的dx、dy的坐标差值
          * (dx2,dy2)不是相对于(dx1,dy1),也是相对于起点的
+         * 控制点移动(80,100) 终止点移动(170,100)
          * */
-//        path.rQuadTo(80,100,170,60);
+        path.rQuadTo(80,100,170,-100);
         paint.setColor(Color.GREEN);
         canvas.drawPath(path,paint);
 
@@ -306,17 +312,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void textLine(View view) {
         Intent intent = new Intent(this,TextActivity.class);
-        int id = view.getId();
-
-        if(id == R.id.btn_text)
-            intent.putExtra("tag",0);
-        else if(id == R.id.btn_text1)
-            intent.putExtra("tag",1);
-        else if(id == R.id.btn_text2)
-            intent.putExtra("tag",2);
-        else if(id == R.id.btn_text3)
-            intent.putExtra("tag",3);
-
         startActivity(intent);
     }
 
@@ -324,12 +319,14 @@ public class MainActivity extends AppCompatActivity {
     /************************ Path 详解 **************************/
     public void pathMeasure(View view) {
 
+        //PathMeasure主要用来测量path，通过它，我们可以得到路径上特定的点的坐标等等
+
         Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setStyle(Paint.Style.STROKE);
         paint.setAntiAlias(true);
         paint.setColor(Color.RED);
 
-        //非闭合矩形
+        //非闭合矩形 边长250
         Path path = new Path();
         path.moveTo(50,50);
         path.lineTo(300,50);
@@ -344,14 +341,13 @@ public class MainActivity extends AppCompatActivity {
         canvas.drawPath(path,paint);
 
         Path dstPath = new Path();
-        dstPath.lineTo(400,30);
+        dstPath.lineTo(500,30);
         //startD 开始截取位置距离Path七点的长度.stopD 结束截取位置巨鹿Path七点的长度.dst截取的Path会添加到dst中.
-        //startWithMoveTo:false 截取一部分 不使用 startMoveTo, 保持 dst 的连续性
+        //startWithMoveTo:如果 startWithMoveTo 为 true, 则被截取出来到Path片段保持原状，如果 startWithMoveTo 为 false，则会将截取出来的 Path 片段的起始点移动到 dst 的最后一个点，以保证 dst 的连续性。
         if(measure.getSegment(20,450,dstPath,true)){//是否截取成功
             paint.setColor(Color.BLUE);
             canvas.drawPath(dstPath,paint);
         }
-
         iv.setImageBitmap(dst);
     }
 
@@ -370,6 +366,10 @@ public class MainActivity extends AppCompatActivity {
         PathMeasure measure = new PathMeasure(path,false);
         System.out.println("第一条 len="+measure.getLength());//1200,也就是最外围的矩形
 
+        /**
+         * 我们知道 Path 可以由多条曲线构成，但不论是 getLength , getgetSegment 或者是其它方法，都只会在其中第一条线段上运行
+         * 而这个 nextContour 就是用于跳转到下一条曲线到方法，如果跳转成功，则返回 true
+         */
         measure.nextContour();//跳转到下一个路径
         System.out.println("第二条 len="+measure.getLength());//800,也就是最里面的矩形
 
@@ -380,6 +380,17 @@ public class MainActivity extends AppCompatActivity {
         2.getLength 获取到到是当前一条曲线分长度，而不是整个 Path 的长度。
         3.getLength 等方法是针对当前的曲线
         */
+
+        /**
+         * getPosTan 这个方法是用于得到路径上某一长度的位置以及该位置的正切值：
+         * pos	该点的坐标值 pos[0] 是该点的x坐标 pos[1]是改点的y坐标
+         * tan	该点的正切值
+         */
+
+        float[] pos = new float[2];
+        float[] tan = new float[2];
+        //注意该measure的是第二条线段!并且该线段是CCW 逆时针的!
+        measure.getPosTan(250,pos,tan);
     }
 
     public void arrow(View view) {
@@ -405,6 +416,19 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("tag",3);
         startActivity(intent);
     }
+
+    public void search(View view){
+        Intent intent = new Intent(this,PathActivity.class);
+        intent.putExtra("tag",4);
+        startActivity(intent);
+    }
+
+    public void circlePath(View view){
+        Intent intent = new Intent(this,PathActivity.class);
+        intent.putExtra("tag",5);
+        startActivity(intent);
+    }
+
 
     /************************ canvas 详解 **************************/
     public void translate(View view) {
@@ -440,6 +464,7 @@ public class MainActivity extends AppCompatActivity {
         canvas.rotate(30);
         paint.setColor(Color.BLUE);
         canvas.drawRect(rect, paint);
+        canvas.drawLine(0,50,200,50,paint);
 
 
         iv.setImageBitmap(bitmap);
@@ -477,76 +502,24 @@ public class MainActivity extends AppCompatActivity {
         canvas.drawColor(Color.GREEN);
 
         //裁剪画布,做个标记.最终合成时,只取裁剪出来的区域,其他的地方丢掉
-        canvas.clipRect(100, 100, 300, 300);
+        canvas.clipRect(100, 100, 350, 350);
         canvas.drawBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.panpan),0,0,paint);
         paint.setColor(Color.RED);
 
         //这个坐标仍然是以原来canvas的左上角为原点
-        canvas.drawCircle(0, 0, 230, paint);
-
-        iv.setImageBitmap(bitmap);
-    }
-
-    public void save(View view) {
-        Bitmap bitmap = Bitmap.createBitmap(600, 600, Bitmap.Config.ARGB_8888);
-        Canvas canvas = new Canvas(bitmap);
-
-        canvas.drawColor(Color.RED);
-        //保存的画布大小为全屏幕大小
-        canvas.save();
-
-        canvas.clipRect(new Rect(100, 100, 800, 800));
-        canvas.drawColor(Color.GREEN);
-        //保存画布大小为Rect(100, 100, 800, 800)
-        canvas.save();
-
-        canvas.clipRect(new Rect(200, 200, 700, 700));
-        canvas.drawColor(Color.BLUE);
-        //保存画布大小为Rect(200, 200, 700, 700)
-        canvas.save();
-
-        canvas.clipRect(new Rect(300, 300, 600, 600));
-        canvas.drawColor(Color.BLACK);
-        //保存画布大小为Rect(300, 300, 600, 600)
-        canvas.save();
-
-        canvas.clipRect(new Rect(400, 400, 500, 500));
-        canvas.drawColor(Color.WHITE);
-
-        //连续出栈三次，将最后一次出栈的Canvas状态作为当前画布，并画成黄色背景.具体的栈结构见drawable目录的图片!!!
-//        canvas.restore();
-//        canvas.restore();
-//        canvas.restore();
-//        canvas.drawColor(Color.YELLOW);
+        canvas.drawCircle(0, 0, 210, paint);
 
         iv.setImageBitmap(bitmap);
     }
 
 
-    public void layer(View view) {
-        Intent intent = new Intent(this,LayerActivity.class);
-        startActivity(intent);
+    /************************ Paint canvas 详解 **************************/
+
+    public void canvasSave(View view){
+        startActivity(new Intent(this,CanvasSaveActivity.class));
     }
 
-    public void layer01(View view) {
-        Intent intent = new Intent(this,XfermodeActivity.class);
-        intent.putExtra("tag",8);
-        startActivity(intent);
-    }
 
-    public void layer02(View view) {
-        Intent intent = new Intent(this,XfermodeActivity.class);
-        intent.putExtra("tag",9);
-        startActivity(intent);
-    }
-
-    public void layer03(View view) {
-        Intent intent = new Intent(this,XfermodeActivity.class);
-        intent.putExtra("tag",10);
-        startActivity(intent);
-    }
-
-    /************************ Paint 详解 **************************/
     private int dx = 10, dy = 10, radius = 10;
     public void shadowLayer(View view) {
         int id = view.getId();

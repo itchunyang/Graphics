@@ -19,10 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TextActivity" />
-        <activity android:name=".PathActivity" />
-        <activity android:name=".XfermodeActivity" />
-        <activity android:name=".LayerActivity"></activity>
+        <activity android:name=".view.text.TextActivity" />
+        <activity android:name=".view.path.PathActivity" />
+        <activity android:name=".view.xfermode.XfermodeActivity" />
+        <activity android:name=".CanvasSaveActivity"></activity>
     </application>
 
 </manifest>

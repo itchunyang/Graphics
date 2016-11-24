@@ -144,39 +144,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <Button
-            android:id="@+id/btn_text1"
-            android:text="TextLine1"
-            android:onClick="textLine"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/btn_text2"
-            android:text="TextLine2"
-            android:onClick="textLine"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/btn_text3"
-            android:text="TextView"
-            android:onClick="textLine"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
 
     <TextView
         android:layout_marginTop="10dp"
@@ -214,6 +183,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
         <Button
             android:text="Arrow"
             android:onClick="arrow"
@@ -246,6 +221,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
+        <Button
+            android:text="Search"
+            android:onClick="search"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:text="Circle"
+            android:onClick="circlePath"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <TextView
@@ -300,54 +295,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <Button
-            android:text="Save"
-            android:onClick="save"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:text="Layer"
-            android:onClick="layer"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:text="Layer"
-            android:onClick="layer01"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:text="Layer"
-            android:onClick="layer02"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:text="Layer"
-            android:onClick="layer03"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
     </LinearLayout>
 
 
@@ -364,7 +311,23 @@
         android:gravity="center"
         android:textSize="25sp"
         android:textColor="#dddddd"
-        android:text="Paint 高级"/>
+        android:text="Paint Canvas 高级"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:text="Canvas Save"
+            android:onClick="canvasSave"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
