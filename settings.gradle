@@ -1,1 +1,1 @@
-include ':app', ':style', ':paintcanvas', ':shader', ':bitmap'
+include ':app', ':style', ':paintcanvas', ':shader'
