@@ -12,8 +12,10 @@ import android.graphics.PathMeasure;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
@@ -512,7 +514,22 @@ public class MainActivity extends AppCompatActivity {
         iv.setImageBitmap(bitmap);
     }
 
+    public void drawable(View view){
+        Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        paint.setColor(Color.RED);
 
+        Bitmap bitmap = Bitmap.createBitmap(600, 600, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        canvas.drawColor(Color.GREEN);
+
+        Drawable drawable = ContextCompat.getDrawable(this,R.drawable.tbag);
+        //这个四参数指的是drawable将在被绘制在canvas的哪个矩形区域内。会缩放到目标区域
+        drawable.setBounds(0,0,600,600);//不设置bounds不会显示
+        drawable.draw(canvas);
+
+        iv.setImageBitmap(bitmap);
+
+    }
     /************************ Paint canvas 详解 **************************/
 
     public void canvasSave(View view){

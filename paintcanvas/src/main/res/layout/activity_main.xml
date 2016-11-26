@@ -2,55 +2,55 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#242424"
+    android:orientation="vertical"
     android:padding="15dp">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="25sp"
+        android:text="Canvas Paint基本方法"
         android:textColor="#dddddd"
-        android:text="Canvas Paint基本方法"/>
+        android:textSize="25sp" />
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <Button
-            android:text="Line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="line"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Line"
+            android:textAllCaps="false" />
 
         <Button
-            android:text="Rect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="rect"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Rect"
+            android:textAllCaps="false" />
 
         <Button
-            android:text="Circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="circle"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Circle"
+            android:textAllCaps="false" />
 
         <Button
-            android:text="RountRect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="roundRect"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="RountRect"
+            android:textAllCaps="false" />
 
     </LinearLayout>
 
@@ -60,36 +60,36 @@
         android:orientation="horizontal">
 
         <Button
-            android:text="Point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="point"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Point"
+            android:textAllCaps="false" />
 
         <Button
-            android:text="Oval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="oval"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Oval"
+            android:textAllCaps="false" />
 
         <Button
-            android:text="Arc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="arc"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Arc"
+            android:textAllCaps="false" />
 
         <Button
-            android:text="Text"
-            android:onClick="text"
-            android:textAllCaps="false"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="text"
+            android:text="Text"
+            android:textAllCaps="false" />
 
     </LinearLayout>
 
@@ -97,70 +97,71 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <Button
-            android:text="Path"
-            android:onClick="path"
-            android:textAllCaps="false"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="path"
+            android:text="Path"
+            android:textAllCaps="false" />
     </LinearLayout>
 
     <TextView
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="#ae0000"/>
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#ae0000" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="25sp"
+        android:text="Text 详解"
         android:textColor="#dddddd"
-        android:text="Text 详解"/>
+        android:textSize="25sp" />
 
     <LinearLayout
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
         <Button
-            android:text="TextPath"
-            android:onClick="textPath"
-            android:textAllCaps="false"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="textPath"
+            android:text="TextPath"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btn_text"
-            android:text="TextLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="textLine"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="TextLine"
+            android:textAllCaps="false" />
 
     </LinearLayout>
 
 
     <TextView
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="#ae0000"/>
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#ae0000" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="25sp"
+        android:text="Path 详解"
         android:textColor="#dddddd"
-        android:text="Path 详解"/>
+        android:textSize="25sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -168,20 +169,20 @@
         android:orientation="horizontal">
 
         <Button
-            android:text="PathMeasure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="pathMeasure"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="PathMeasure"
+            android:textAllCaps="false" />
 
         <Button
-            android:text="PathMeasure1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="pathMeasure1"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="PathMeasure1"
+            android:textAllCaps="false" />
 
     </LinearLayout>
 
@@ -189,74 +190,76 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <Button
-            android:text="Arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="arrow"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Arrow"
+            android:textAllCaps="false" />
 
         <Button
-            android:text="Heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="heart"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Heart"
+            android:textAllCaps="false" />
 
         <Button
-            android:text="Hand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="hand"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Hand"
+            android:textAllCaps="false" />
 
         <Button
-            android:text="Wave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="wave"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Wave"
+            android:textAllCaps="false" />
 
         <Button
-            android:text="Search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="search"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Search"
+            android:textAllCaps="false" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <Button
-            android:text="Circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="circlePath"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Circle"
+            android:textAllCaps="false" />
     </LinearLayout>
 
     <TextView
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="#ae0000"/>
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#ae0000" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="25sp"
+        android:text="Canvas 详解"
         android:textColor="#dddddd"
-        android:text="Canvas 详解"/>
+        android:textSize="25sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -264,54 +267,62 @@
         android:orientation="horizontal">
 
         <Button
-            android:text="Trans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="translate"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Trans"
+            android:textAllCaps="false" />
 
         <Button
-            android:text="Rotate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="rotate"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Rotate"
+            android:textAllCaps="false" />
 
         <Button
-            android:text="Scale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="scale"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Scale"
+            android:textAllCaps="false" />
 
         <Button
-            android:text="Clip"
-            android:onClick="clip"
-            android:textAllCaps="false"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="clip"
+            android:text="Clip"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="drawable"
+            android:text="Drawable"
+            android:textAllCaps="false" />
 
     </LinearLayout>
 
 
     <TextView
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="#ae0000"/>
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#ae0000" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="25sp"
+        android:text="Paint Canvas 高级"
         android:textColor="#dddddd"
-        android:text="Paint Canvas 高级"/>
+        android:textSize="25sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -319,12 +330,12 @@
         android:orientation="horizontal">
 
         <Button
-            android:text="Canvas Save"
-            android:onClick="canvasSave"
-            android:textAllCaps="false"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="canvasSave"
+            android:text="Canvas Save"
+            android:textAllCaps="false" />
 
     </LinearLayout>
 
@@ -336,39 +347,39 @@
 
         <Button
             android:id="@+id/btn_shadowLayer"
-            android:text="阴影效果"
-            android:onClick="shadowLayer"
-            android:textAllCaps="false"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="shadowLayer"
+            android:text="阴影效果"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btn_dx_plus"
-            android:text="增加dx"
-            android:onClick="shadowLayer"
-            android:textAllCaps="false"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="shadowLayer"
+            android:text="增加dx"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btn_dy_plus"
-            android:text="增加dy"
-            android:onClick="shadowLayer"
-            android:textAllCaps="false"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="shadowLayer"
+            android:text="增加dy"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btn_radius_plus"
-            android:text="增加radius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="shadowLayer"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="增加radius"
+            android:textAllCaps="false" />
 
     </LinearLayout>
 
@@ -376,84 +387,88 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <Button
-            android:text="AvoidXfermode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="avoidXfermode"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="AvoidXfermode"
+            android:textAllCaps="false" />
+
         <Button
-            android:text="PorterDuffXfermode"
-            android:onClick="porterDuffXfermode"
-            android:textAllCaps="false"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="porterDuffXfermode"
+            android:text="PorterDuffXfermode"
+            android:textAllCaps="false" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <Button
-            android:text="图片遮罩"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="imageMask"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="图片遮罩"
+            android:textAllCaps="false" />
 
         <Button
-            android:text="灯光书架"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="light"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="灯光书架"
+            android:textAllCaps="false" />
 
         <Button
-            android:text="涂鸦图片"
             android:id="@+id/eraser_1"
-            android:onClick="eraser"
-            android:textAllCaps="false"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="eraser"
+            android:text="涂鸦图片"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/eraser_2"
-            android:text="涂鸦图片"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="eraser"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="涂鸦图片"
+            android:textAllCaps="false" />
 
         <Button
-            android:text="文字波浪"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="textWave"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="文字波浪"
+            android:textAllCaps="false" />
 
         <Button
-            android:text="文字波浪"
-            android:onClick="circleWave"
-            android:textAllCaps="false"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="circleWave"
+            android:text="文字波浪"
+            android:textAllCaps="false" />
     </LinearLayout>
-
 
     <ImageView
         android:id="@+id/iv"
-        android:layout_gravity="center_horizontal"
-        android:background="#cccccc"
-        android:layout_marginTop="20dp"
         android:layout_width="600dp"
-        android:layout_height="600dp" />
+        android:layout_height="600dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="#cccccc" />
+
 
 </LinearLayout>

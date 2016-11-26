@@ -32,10 +32,10 @@ public class ImageMaskView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         int layerID = canvas.saveLayer(0,0,getWidth(),getHeight(),null,Canvas.ALL_SAVE_FLAG);
-        // 先绘制dis目标图
+        // 先绘制dst目标图
         canvas.drawBitmap(dst, 180, 200, mPaint);
 
-//        // 设置混合模式   （只在源图像和目标图像相交的地方绘制目标图像）
+//        // 设置混合模式   （只在源图像和目标图像相交的地方绘制目标图像） /** [Sa * Da, Sa * Dc] */
         mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));
 
         // 再绘制src源图

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:onClick="decodeFile"
+            android:text="decodeFile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:onClick="decodeResource"
+            android:text="decodeResource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:onClick="decodeByte"
+            android:text="decodeByte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_2"
+        android:layout_below="@id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:onClick="decodeResourceStream"
+            android:text="decodeResourceStream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:onClick="decodeStream"
+            android:text="decodeStream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_below="@id/ll_2"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#cccccc"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_3"
+        android:layout_below="@id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:onClick="originBitmap"
+            android:text="原始图片"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:onClick="justDecodeBounds"
+            android:text="JustDecodeBounds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:onClick="simpleSize"
+            android:text="SimpleSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:onClick="simpleSize1"
+            android:text="SimpleSize_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_4"
+        android:layout_below="@id/ll_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:onClick="scaleMetohd"
+            android:text="ScaleMetohd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:onClick="scaleMetohd1"
+            android:text="ScaleMetohd1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:onClick="scaleMetohd2"
+            android:text="ScaleMetohd2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:onClick="scaleMetohd3"
+            android:text="ScaleMetohd3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:onClick="scaleMetohd4"
+            android:text="ScaleMetohd4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_5"
+        android:layout_below="@id/ll_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:onClick="compress"
+            android:text="Compress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:onClick="copy"
+            android:text="Copy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:onClick="matrix"
+            android:text="Matrix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:onClick="density"
+            android:text="Density"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/ll_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:onClick="captureScreen"
+            android:text="CaptureScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:onClick="drawBitmap"
+            android:text="DrawBitmap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:onClick="drawBitmap1"
+            android:text="DrawBitmap1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/iv"
+        android:background="#EBEBEB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Graphics.iml" filepath="$PROJECT_DIR$/Graphics.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bitmap/bitmap.iml" filepath="$PROJECT_DIR$/bitmap/bitmap.iml" />
       <module fileurl="file://$PROJECT_DIR$/paintcanvas/paintcanvas.iml" filepath="$PROJECT_DIR$/paintcanvas/paintcanvas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shader/shader.iml" filepath="$PROJECT_DIR$/shader/shader.iml" />
       <module fileurl="file://$PROJECT_DIR$/style/style.iml" filepath="$PROJECT_DIR$/style/style.iml" />
     </modules>
   </component>

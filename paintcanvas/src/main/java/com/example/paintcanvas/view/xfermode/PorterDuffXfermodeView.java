@@ -13,6 +13,8 @@ import android.view.View;
 
 /**
  * Created by luchunyang on 16/8/18.
+ *
+ * http://m.blog.csdn.net/article/details?id=50472485
  */
 public class PorterDuffXfermodeView extends View {
 
