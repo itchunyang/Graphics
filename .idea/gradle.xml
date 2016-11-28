@@ -10,6 +10,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/bitmap" />
+            <option value="$PROJECT_DIR$/density" />
             <option value="$PROJECT_DIR$/paintcanvas" />
             <option value="$PROJECT_DIR$/shader" />
             <option value="$PROJECT_DIR$/style" />
